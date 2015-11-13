@@ -6,13 +6,13 @@ require "users.class.php";
 	class theVeil
 	{
 		public static $database;
-		public static $posts;
+		public static $threads;
 		public static $users;
 		
 		public function __construct()
 		{
 		 self::$database = new database;
-		 self::$posts = new posts;
+		 self::$threads = new threads;
 		 self::$users = new users;
 		}				
 	}
