@@ -1,6 +1,6 @@
 <?php
 require "database.class.php";
-require "posts.class.php";
+require "threads.class.php";
 require "users.class.php";
 
 	class theVeil

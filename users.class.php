@@ -8,7 +8,7 @@
 		);
 		
 
-		public function newUser($name, $password)
+		public function create($name, $password)
 		{
 			$array = array('name' => $name, 'password' => md5($password));
 			if(theVeil::$database->insert('users', $array))
@@ -20,7 +20,7 @@
 			}
 		}
 		
-		public function getUserName($id)
+		public function getName($id)
 		{
 			if($id == $this->anonymous['id'])
 			{
@@ -32,7 +32,7 @@
 			}
 		}
 		
-		public function postCountById($id)
+		public function postCount($id)
 		{
 			var_dump(theVeil::$database->count('posts', "WHERE author = {$id}"));
 		}
