@@ -21,10 +21,10 @@
 			$rows = implode(array_keys($args), ',');
 			$_values = array_values($args);
 			$temp_values = array();
-				foreach($_values as $va)
-				{
+			foreach($_values as $va)
+			{
 				$temp_values[] = "'{$va}'";
-				}
+			}
 
 			$values = implode($temp_values, ',');
 			if(mysql_query("INSERT INTO `{$table}` ({$rows}) VALUES ({$values});"))
@@ -34,15 +34,14 @@
 			{
 				return false;
 			}
-
 		}
 
 		public function select($table, $opt = null)
 		{
 			$query = mysql_query ("SELECT * FROM {$table} {$opt}");		
 			$array = array();
-				for($i = 0; $array[$i] = mysql_fetch_array($query, MYSQL_ASSOC); $i++); array_pop($array);
-				return $array;
+			for($i = 0; $array[$i] = mysql_fetch_array($query, MYSQL_ASSOC); $i++); array_pop($array);
+			return $array;
 		}
 		
 		public function count($table, $opt)

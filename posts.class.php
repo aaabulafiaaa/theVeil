@@ -36,7 +36,7 @@
 				return theVeil::$database->select('posts', "WHERE thread = {$thread} ORDER BY date");
 			} else
 			{
-				return $this->database->select('posts');
+				return false;
 			}
 		}
 		
