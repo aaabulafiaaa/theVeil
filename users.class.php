@@ -4,7 +4,8 @@
 		private $anonymous = array
 		(
 			'id' => 0,
-			'name' => "Anônimo"
+			'name' => "Anônimo",
+			'allow' => true
 		);
 		
 
