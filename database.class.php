@@ -12,7 +12,7 @@
 			$this->mysql = mysql_connect($this->server, $this->user, $this->password);
 			if($this->mysql)
 			{
-					mysql_select_db($this->database, $this->mysql);
+				mysql_select_db($this->database, $this->mysql);
 			}
 		}
 
