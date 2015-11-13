@@ -26,12 +26,10 @@
 				$data = theVeil::$database->select('users', "WHERE `name` = '{$name}' AND `password` = '{$password}' LIMIT 1");
 				if($data)
 				{
-						echo 'rolou';
-					var_dump($data);
+					return $data[0]["id"];
 				} else
 				{
-						echo 'nao rolou';
-					var_dump($data);
+					false;
 				}
 		}
 		
