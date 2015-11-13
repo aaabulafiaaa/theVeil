@@ -20,6 +20,21 @@
 			}
 		}
 		
+		public function verify($name, $password)
+		{
+				$password = md5($password);
+				$data = theVeil::$database->select('users', "WHERE `name` = '{$name}' AND `password` = '{$password}' LIMIT 1");
+				if($data)
+				{
+						echo 'rolou';
+					var_dump($data);
+				} else
+				{
+						echo 'nao rolou';
+					var_dump($data);
+				}
+		}
+		
 		public function getName($id)
 		{
 			if($id == $this->anonymous['id'])

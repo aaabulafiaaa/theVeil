@@ -38,7 +38,7 @@
 
 		public function select($table, $opt = null)
 		{
-			$query = mysql_query ("SELECT * FROM {$table} {$opt}");		
+			$query = mysql_query("SELECT * FROM {$table} {$opt}");		
 			$array = array();
 			for($i = 0; $array[$i] = mysql_fetch_array($query, MYSQL_ASSOC); $i++); array_pop($array);
 			return $array;
