@@ -1,18 +1,20 @@
 <?php
 	class input
 	{
-		public static $get;
-		public static $post;
 		
 		public function get($source)
 		{
-			return $this->sanitize($_GET["{$source}"]);
+			return $this->$source;
 		}
 		
 		public function post()
 		{
-			return $this->sanitize($_POST["{$source}"]);
+			return $this->$source;
 		}
+		
+		public function __get($source){
+			if($_GET[$source]){ return $_GET[$source]; } elseif($_POST[$source]){ return $_POST[$source]; } else { return false; }
+			}
 		
 		private function sanitize($source)
 		{
